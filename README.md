@@ -8,12 +8,12 @@
 - [Инструкция по установке](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F-%D0%BF%D0%BE-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B5)
 - [Постановка задачи](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8)
 - [Решение. Сценарии использования](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
- - [Обычный пользователь](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C)
- - [Администратор](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C)
- - [Приглашенный специалист](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82)
+  - [Обычный пользователь](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C)
+  - [Администратор](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C)
+  - [Приглашенный специалист](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82)
 - [Архитектура](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
- - [Фронтенд](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82)
- - [Бекенд](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82)
+  - [Фронтенд](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82)
+  - [Бекенд](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D1%80%D0%B8%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82)
  - [Модель машинного обучения]()
 - [Демонстрация решения](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
 - [Направления дальнейшей разработки](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
@@ -51,12 +51,11 @@ todo
 todo
 ### Бекенд
 todo
-
+### Модель машинного обучения
+todo
 ## Демонстрация решения
 ![alt text](ClassDiagram.png "Диаграмма классов")
 
-## Модель машинного обучения
-todo
 ## Направления дальнейшей разработки
 В качестве направлений дальнейших разработок мы хотим сделать следующие изменения:
 - Сделать **авторизацию пользоваталей** с использованием OAuth;
