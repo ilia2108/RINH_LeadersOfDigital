@@ -47,6 +47,8 @@
 1.  Переход по ссылке ('https://leaders.bss.design/') 
 2.  Использование страниц из репозитория в папке ```frontend```
   
+  Ниже приведено видео тестирования (необходимо нажать на картинку, чтобы открыть видео):
+  
 [![Видео тестирования](https://i9.ytimg.com/vi/lExXNzMErrc/mq2.jpg?sqp=CIDfjP4F&rs=AOn4CLAw9DpAHBYrU4ajG5x1bfl58BzxnQ)](https://youtu.be/lExXNzMErrc "Видео тестирования")
 
 ## Постановка задачи
