@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% block content %}
+    <h1>Подобрать кандидатов в проект</h1>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.ann.label }}<br>
+            {{ form.ann(size=132) }}
+        </p>
+        <p>
+            {{ form.tags.label }}<br>
+            {{ form.tags(size=132) }}
+        </p>
+        <p>{{ form.search() }}</p>
+    </form>
+{% endblock %}
