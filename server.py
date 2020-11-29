@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+# ! /usr/bin/env python
 # -*- coding: utf-8 -*-
 
 from flask import Flask, jsonify, request
@@ -63,7 +63,6 @@ model_sent = FastTextSocialNetworkModel(tokenizer=tokenizer)
 Могут быть настроены как вручную, 
 так и с использованием адаптивных алгоритмов 
 в будущем для наиболее успешной рекомендации.
-
 tags_correct_const - Количество необходимых совпадений по тегам пользователя и проекта для дальнейшего анализа статей пользователя на узкоспециализированные теги
 semantic_const - Мера семантической близости (параметр критерия схожести слов). Чем выше параметр, тем выше порог для отброра схожих слов. (Напр: 'онкологический','онкология' = 0.6, 'дерево','автомобиль' = 0.1) 
 ratio_const - Обозначает степень суммаризации текста. Чем ниже парамтер, тем больше сжатие
@@ -98,7 +97,6 @@ def get_candidates():
     """
     get_candidates(request.post) - вход: json, выход: json
     Создание листа кандидатов на проект
-
     Входной JSON:
     projects_tags - теги, присвоенные проекту
     annotation - аннотация, написанная для проекта
@@ -111,7 +109,6 @@ def get_candidates():
         - reviews (Рецензии на статьи)
       - rating (Оценки, полученные кандидатом от других пользователей)
       - projects (Количество проектов пользователя)
-
     Выходной Json:
     Лист кандидатов, отсортированный по убыванию оценки модели.
     Вид: 'result':[(ID,оценка)]
@@ -142,7 +139,8 @@ def get_candidates():
         # Начальная оценка кандидата
         candidate_score = max(count_projects, 0.000001) * count_projects_weight + max(candidate_rating,
                                                                                       0.000001) * candidate_rating_weight + max(
-            count_articles, 0.000001) / count_articles_weight + max(citation, 0.000001) * citation_index_weight + max(h_index, 0.000001) * h_index 
+            count_articles, 0.000001) / count_articles_weight + max(citation, 0.000001) * citation_index_weight + max(
+            h_index, 0.000001) * h_index
         tags_correct = 0
         keys_annotation_tags, project_tags = completion(keys_annotation_tags, project_tags)
 
@@ -157,7 +155,7 @@ def get_candidates():
             # 2) Анализ тональности отзывов для дополнительной оценки кандидата
             if tags_correct > tags_correct_const:
                 for article in articles:
-#                     _=antiplag(article)
+                    #                     _=antiplag(article)
                     key_phrases_article = get_key_phrases(article)
                     for key_phrase_article in key_phrases_article:
                         x, y = change_candidate_score(key_phrase_article, False, candidate_tag)
@@ -177,14 +175,11 @@ def get_candidates():
 def get_proximity(tag_1, tag_2):
     """
     get_proximity(tag_1,tag_2) - вход: str, выход: int/str
-
     Использование модели NLP rusvectores, обученную на Национальном корпусе русского языка (НКРЯ)
     для поиска семантической близости между словами.
     Напр: 'онкологический','онкология' = 0.6, 'дерево','автомобиль' = 0.1
-
     Входной str:
     tag_1, tag_2 - слова, которые сравниваются
-
     Выходной int/str:
     int: Мера семантической близости
     str: Отсутствие слов в NLP модели
@@ -199,15 +194,15 @@ def get_proximity(tag_1, tag_2):
 def get_summary(text):
     """
     get_summary(text) - вход: str, выход: str
-  
+
     Суммаризация (автореферирование/сжатие > 10 раз) текста для:
     1) Ускоренной обработки информации другими моделями
     2) Предоставление сжатых статей кандидатов для ознакомления
     пользователям
-  
+
     Входной str:
     text - текст статьи
-  
+
     Выходной str:
     text - суммаризированный текст
     """
@@ -217,13 +212,13 @@ def get_summary(text):
 def get_key_phrases(text):
     """
     get_key_phrases(text) - вход: str, выход: list (str)
-  
+
     Получение ключевых фраз из текста (в том числе выделение тегов)
     для последующей обработки
-  
+
     Входной str:
     text - определенный текст
-  
+
     Выходной list (str):
     key_phrases - лист ключевых слов
     """
@@ -241,13 +236,10 @@ def get_key_phrases(text):
 def tags_in_model(tag_1, tag_2):
     """
     tags_in_model(tag_1,tag_2) - вход: str, выход: str/boolean
-
-    Поиск слов в базе данных модели семантической близости и 
+    Поиск слов в базе данных модели семантической близости и
     их редактирование для правильной работы модели.
-
     Входной str:
     tag_1, tag_2 - слова, которые предобрабатывают
-
     Выходной str/boolean:
     str: предобработанные слова
     boolean: True - слова нашлись в базе данных модели
@@ -270,12 +262,9 @@ def tags_in_model(tag_1, tag_2):
 def lemmatization(tags):
     """
     lemmatization(tags) - вход: list, выход: list
-
     Перевод слов к начальной форме
-
     Входной list:
     tags - набор тегов
-
     Выходной list:
     lemms - набор тегов, приведенных к начальной форме
     """
@@ -288,13 +277,10 @@ def lemmatization(tags):
 def completion(keys_annotation_tags, project_tags):
     """
     completion(keys_annotation_tags,project_tags) - вход: list, выход: list
-
     Дополнение набора тегов нулями до единого размера
-
     Входной list:
     keys_annotation_tags - теги аннотации
     project_tags - теги проекта
-
     Выходноой list:
     keys_annotation_tags, project_tags единой размерности
     """
@@ -311,15 +297,12 @@ def change_candidate_score(keys_annotation_tag, project_tag, candidate_tag):
     """
     change_candidate_score(keys_annotation_tag,project_tag,candidate_tag) -
     вход: list, выход: int
-
     Подсчитывает очки пользователя для рейтинга по семантической близости между тегами,
     а также считает общее количество совпадающих тегов
-
     Входной list:
     keys_annotation_tag - тег аннотации
     project_tag - тег проекта
     candidate_tag - тег кандидата
-
     Выходной int:
     score - значение, на котрое меняется оценка пользователя в рейтинге (candidate_score)
     tags_correct - значение, на которое меняется количество совпадающих тегов (tags_correct)
@@ -330,7 +313,7 @@ def change_candidate_score(keys_annotation_tag, project_tag, candidate_tag):
     if proximity_1 == 'Not Found':
         pass
     elif proximity_1 > semantic_const:
-        score += proximity_1 * (candidate_tag['stage']*10)**2 * additional_weight_keys_annotation
+        score += proximity_1 * (candidate_tag['stage'] * 10) ** 2 * additional_weight_keys_annotation
         tags_correct += 1
     if project_tag == False:
         return score, tags_correct
@@ -347,12 +330,12 @@ def change_candidate_score(keys_annotation_tag, project_tag, candidate_tag):
 def sentiments(text):
     """
     sentiments(text) - вход: str, выход: float
-  
+
     Анализ эмоциональной тональности текста на основе модели FastText
-  
+
     Входной str:
     text - анализируемый текст
-  
+
     Выходной float:
     positive - процент позитивной тональности
     negative - процент негативной тональности
@@ -367,24 +350,28 @@ def sentiments(text):
 
     return positive, negative
 
+
 def antiplag(text):
     """
     antiplag(text) - вход: str, выход: float
-    
+
     Анализ текста на уникальность в процентах
-    Используется в анализе статей. 
+    Используется в анализе статей.
     Подробнее про API на сайте text.ru
-    
+
     Входной str:
     text - анализируемый текст
-  
+
     Выходной float:
     unique_p - процент оригинальности
     """
     your_token = ''
-    z = requests.post('http://api.text.ru/post',data={'text':text[:100000],'userkey':your_token})
-    unique_p =  = requests.post('http://api.text.ru/post',data={'uid':z.json()','userkey':your_token}).json()['unique']
+    z = requests.post('http://api.text.ru/post', data={'text': text[:100000], 'userkey': your_token})
+    unique_p =  requests.post('http://api.text.ru/post',
+                                data={'uid': z.json(),'userkey':your_token}).json()['unique']
+    
     return unique_p
-                                                                
+
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='883')
