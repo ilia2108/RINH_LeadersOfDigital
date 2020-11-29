@@ -65,7 +65,7 @@
 9. В окне появится адрес сайта. Переходим по нему и заполняем критерии. После кнопки подтверждения
 будет отправлен http запрос на сервер ML. Ответом будет редирект на страничку с листом подобранных под проект кандидатов.
 
-[![Видео тестирования](https://i9.ytimg.com/vi/lExXNzMErrc/mq2.jpg?sqp=CIDfjP4F&rs=AOn4CLAw9DpAHBYrU4ajG5x1bfl58BzxnQ)](https://youtu.be/lExXNzMErrc "Видео тестирования")
+[![Видео тестирования](https://i9.ytimg.com/vi/_Z5PRIEPu0M/mq2.jpg?sqp=CIDfjP4F&rs=AOn4CLAw9DpAHBYrU4ajG5x1bfl58BzxnQ)](https://youtu.be/_Z5PRIEPu0M "Видео тестирования")
 
 
 ## Постановка задачи
