@@ -1,3 +1,6 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 import zipfile
@@ -11,7 +14,6 @@ import nltk
 import pymorphy2
 import gensim
 from rutermextract import TermExtractor
-import numpy as np
 
 # ТЕГ - это объект, которым можно охарактеризовать проект или пользователя. Напр: молекулярная физика - тег проекта или навык пользователя)
 # Инициализация модели для ключевых фраз из предложений
