@@ -17,7 +17,7 @@ ENV BASE_PATH /flask
 ENV LC_ALL=C.UTF-8 
 ENV LANG=C.UTF-8
 ENV FLASK_ENV=development
-ENV FLASK_APP=app.py;
+ENV FLASK_APP=server.py
 RUN set FLASK_APP=$FLASK_APP 
 
 #Копируем локальный requirements.txt внутрь кеша изображения Docker
