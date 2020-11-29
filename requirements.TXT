@@ -10,4 +10,3 @@ DAWG-Python==0.7.2
 DAWG==0.8.0
 dostoevsky==0.5.0
 rutermextract==0.3
-numpy
