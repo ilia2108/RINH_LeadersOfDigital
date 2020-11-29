@@ -2,10 +2,12 @@
 
 В данном репозитории находится решение кейса от РГЭУ (РИНХ) для финала хакатона "Цифровой прорыв". Ниже будут описаны подробности решения, а также видео с подробной демонстрацией прототипа.
 
-![видео]()
+[![видео]()]()
 
 ## Содержание
 - [Инструкция по установке](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F-%D0%BF%D0%BE-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B5)
+  - [С использованием Docker](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%81-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC-docker)
+  - [Тестирование алгоритмов](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%BE%D0%B2-%D0%BF%D0%BE%D0%B4%D0%B1%D0%BE%D1%80%D0%B0-%D0%BA%D0%B0%D0%BD%D0%B4%D0%B8%D0%B4%D0%B0%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%B1%D0%B5%D0%B7-docker)
 - [Постановка задачи](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8)
 - [Решение. Сценарии использования](https://github.com/ilia2108/RINH_LeadersOfDigital#%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)
   - [Обычный пользователь](https://github.com/ilia2108/RINH_LeadersOfDigital#%D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C)
@@ -26,7 +28,7 @@
 3. Перейти в директорию с репозиторием и запустить команду ```docker-compose up``` или ```docker-compose up --build```.
 
 ### Тестирование алгоритмов подбора кандидатов на проект без Docker
-Ниже приведено видео тестирования:
+Ниже приведено видео тестирования (необходимо нажать на картинку, чтобы открыть видео):
 
 [![Видео тестирования](https://img.youtube.com/vi/HlCrs5hwq8Q/0.jpg)](https://youtu.be/HlCrs5hwq8Q "Видео тестирования")
 
