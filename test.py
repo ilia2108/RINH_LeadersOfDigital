@@ -79,6 +79,6 @@ candidates = \
   ]
 
 print(test)
-
+print(candidates)
 # Результаты зависят от весов в test
 print(requests.post('http://localhost:883/get_candidates',headers={'Content-Type':'application/json'},json={'project_tags':tags,'candidates':candidates,'annotation':test}).json())
