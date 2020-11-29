@@ -1,11 +1,14 @@
 version: "3.8"
 services:
+  #Сервис серверной логики
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
       - "5000:5000"
+  
+  #Сервис машинного обучения
   ml:
     build:
       context: ./ML
