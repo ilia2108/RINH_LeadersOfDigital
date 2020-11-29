@@ -46,6 +46,7 @@
 Возможно 2-я способами: 
 1.  Переход по ссылке ('https://leaders.bss.design/') 
 2.  Использование страниц из репозитория в папке ```frontend```
+  
 [![Видео тестирования](https://i9.ytimg.com/vi/lExXNzMErrc/mq2.jpg?sqp=CIDfjP4F&rs=AOn4CLAw9DpAHBYrU4ajG5x1bfl58BzxnQ)](https://youtu.be/lExXNzMErrc "Видео тестирования")
 
 ## Постановка задачи
