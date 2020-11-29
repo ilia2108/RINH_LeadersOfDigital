@@ -65,18 +65,19 @@ model_sent = FastTextSocialNetworkModel(tokenizer=tokenizer)
 
 tags_correct_const - Количество необходимых совпадений по тегам пользователя и проекта для дальнейшего анализа статей пользователя на узкоспециализированные теги
 semantic_const - Мера семантической близости (параметр критерия схожести слов). Чем выше параметр, тем выше порог для отброра схожих слов. (Напр: 'онкологический','онкология' = 0.6, 'дерево','автомобиль' = 0.1) 
-ratio_const - Обозначает уровень суммаризации текста. Чем ниже парамтер, тем больше сжатие
+ratio_const - Обозначает степень суммаризации текста. Чем ниже парамтер, тем больше сжатие
 additional_weight_keys_annotation - Вес влияния тегов, полученных моделью с аннотаций. Чем выше вес, тем большую роль играет аннотация
-additional_weight_project_tag -  влияния тегов, полученных моделью с присвоенных пользователем тегов к проекту. Чем выше вес, тем большую роль играют теги проекта 
+additional_weight_project_tag -  влияния тегов, полученных моделью с присвоенных пользователем тегов проекту. Чем выше вес, тем большую роль играют теги проекта 
 count_projects_weight - Вес влияния тегов, полученных моделью с присвоенных пользователем тегов к проекту. Чем выше вес, тем большую роль играют теги проекта 
 count_articles_weight - Вес влияния количества статей на оценку кандидата моделью. Чем выше вес, тем большую роль играет количество статей
 candidate_rating_weight - Вес влияния оценки профиля кандидата другими пользователями. Чем выше вес, тем большую роль играет оценка
 citation_index_weight - Вес влияния среднего количества цитируемости статей кандидата. Чем выше вес, тем большую роль играет цитируемость  
 pos_const - Вес влияния позитивных рецензий на статьи кандидата. Чем выше вес, тем большую роль играют позитивные рецензии
 neg_const - Вес влияния негативных рецензий на статьи кандидата. Чем выше вес, тем большую роль играют негативные рецензии
+h_index_weight - Вес влияния Индекса Хирша на оценку кандидата
 """
 
-tags_correct_const = 4
+tags_correct_const = 6
 semantic_const = 0.4
 ratio_const = 0.1
 additional_weight_keys_annotation = 0.4
@@ -87,6 +88,7 @@ candidate_rating_weight = 0.2
 citation_index_weight = 1.0
 pos_const = 1.0
 neg_const = 1.0
+h_index_weight = 1.0
 
 
 @app.route("/get_candidates", methods=['POST'])
@@ -134,10 +136,12 @@ def get_candidates():
         count_articles = len(articles)
         candidate_rating = candidate['rating']
         count_projects = len(candidate['projects'])
+        citation = candidate['citation']
+        h_index = candidate['h_index']
         # Начальная оценка кандидата
         candidate_score = max(count_projects, 0.000001) * count_projects_weight + max(candidate_rating,
                                                                                       0.000001) * candidate_rating_weight + max(
-            count_articles, 0.000001) / count_articles_weight
+            count_articles, 0.000001) / count_articles_weight + max(citation, 0.000001) * citation_index_weight + max(h_index, 0.000001) * h_index 
         tags_correct = 0
         keys_annotation_tags, project_tags = completion(keys_annotation_tags, project_tags)
 
