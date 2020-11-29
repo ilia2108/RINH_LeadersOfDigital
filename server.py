@@ -13,6 +13,7 @@ from dostoevsky.models import FastTextSocialNetworkModel
 import nltk
 import pymorphy2
 import gensim
+import requests
 from rutermextract import TermExtractor
 
 # ТЕГ - это объект, которым можно охарактеризовать проект или пользователя. Напр: молекулярная физика - тег проекта или навык пользователя)
@@ -156,6 +157,7 @@ def get_candidates():
             # 2) Анализ тональности отзывов для дополнительной оценки кандидата
             if tags_correct > tags_correct_const:
                 for article in articles:
+#                     _=antiplag(article)
                     key_phrases_article = get_key_phrases(article)
                     for key_phrase_article in key_phrases_article:
                         x, y = change_candidate_score(key_phrase_article, False, candidate_tag)
@@ -344,14 +346,14 @@ def change_candidate_score(keys_annotation_tag, project_tag, candidate_tag):
 
 def sentiments(text):
     """
-    sentiments(text) - вход: str, выход: int
+    sentiments(text) - вход: str, выход: float
   
     Анализ эмоциональной тональности текста на основе модели FastText
   
     Входной str:
     text - анализируемый текст
   
-    Выходной int:
+    Выходной float:
     positive - процент позитивной тональности
     negative - процент негативной тональности
     """
@@ -365,6 +367,24 @@ def sentiments(text):
 
     return positive, negative
 
-
+def antiplag(text):
+    """
+    antiplag(text) - вход: str, выход: float
+    
+    Анализ текста на уникальность в процентах
+    Используется в анализе статей. 
+    Подробнее про API на сайте text.ru
+    
+    Входной str:
+    text - анализируемый текст
+  
+    Выходной float:
+    unique_p - процент оригинальности
+    """
+    your_token = ''
+    z = requests.post('http://api.text.ru/post',data={'text':text[:100000],'userkey':your_token})
+    unique_p =  = requests.post('http://api.text.ru/post',data={'uid':z.json()','userkey':your_token}).json()['unique']
+    return unique_p
+                                                                
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port='883')
